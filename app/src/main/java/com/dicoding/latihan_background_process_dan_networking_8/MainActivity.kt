@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val constraints = Constraints.Builder()
             .setRequiredNetworkType(NetworkType.CONNECTED)
             .build()
-        periodicWorkRequest = PeriodicWorkRequest.Builder(MyWorker::class.java, 15, TimeUnit.SECONDS)
+        periodicWorkRequest = PeriodicWorkRequest.Builder(MyWorker::class.java, 15, TimeUnit.MINUTES)
             .setInputData(data)
             .setConstraints(constraints)
             .build()
